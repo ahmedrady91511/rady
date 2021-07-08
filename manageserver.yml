@@ -1,0 +1,6 @@
+---
+- hosts: 'host1' 
+  tasks: 
+ 
+   -name : stop service httpd
+     serrvice: 'name=httpd state=stopped'

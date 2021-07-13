@@ -1,6 +1,8 @@
 ---
-- hosts: 'host1' 
-  tasks: 
- 
-   -name : stop service httpd
-     serrvice: 'name=httpd state=stopped'
+-hosts: ALL
+   tasks:
+  - name: restart service
+    service:
+          name: "httpd"
+          state: stopped
+          enabled: yes
